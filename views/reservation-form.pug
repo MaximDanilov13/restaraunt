@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.reservation-content-wrapper.content-wrapper
+    div.reservation-form
+      h1.reservation-form__info.subtitle Бронирование
+
+      form.reservation-form__form(action="/reservation", method="post")
+        div.form__group
+          label.form__label(for="username") Введите фамилию
+
+          input#username.form__input(type="text", name="username", autocomplete="off", required)
+
+        div.form__group
+          label.form__label(for="date") Выберете дату
+
+          input#date.form__input(type="date", name="date", autocomplete="off", min="2021-01-20", required)
+
+        div.form__group
+          label.form__label(for="time") Выберете время
+
+          input#time.form__input(type="time", name="time", autocomplete="off", min="21:00", max="01:00", required)
+
+        div.form__group
+          label.form__label(for="tel") Введите номер телефона 
+
+          input#tel.form__input(type="tel", name="tel", autocomplete="off", pattern="8[0-9]{10}" required)
+          
+        button.reservation__button.button(type="submit") Бронировать столик
