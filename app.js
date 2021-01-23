@@ -7,11 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var contactsRouter = require('./routes/contacts');
 var reservationRouter = require('./routes/reservation');
+var menuRouter = require('./routes/menu');
 
 var app = express();
-
-const session = require("express-session");
-const MongoStore = require("connect-mongo")(session);
 
 // Set up mongoose connection
 const mongoose = require("mongoose");
@@ -36,20 +34,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(
-  session({
-    key: "user_sid",
-    secret: "secret key",
-    resave: false,
-    saveUninitialized: false,
-    cookie: { maxAge: 3600000 },
-    store: new MongoStore({ mongooseConnection: db }),
-  })
-);
 
 app.use('/', indexRouter);
 app.use('/contacts', contactsRouter);
 app.use('/reservation', reservationRouter);
+app.use('/menu', menuRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

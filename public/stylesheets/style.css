@@ -17,7 +17,6 @@
 
 /* common */
 .content-wrapper {
-  height: 83vh;
   margin: 0 3%;
   display: flex;
 }
@@ -85,6 +84,7 @@
 
 /* main page */
 .main-content-wrapper {
+  height: 83vh;
   background-image: url(../images/index-background.jpg);
   background-size: cover;
 }
@@ -115,6 +115,7 @@
 
 /* contacts */
 .contacts-content-wrapper{
+  height: 83vh;
   background-image: url(../images/contacts-background.jpeg);
   background-size: cover;
 
@@ -208,6 +209,7 @@
 
 /* form */
 .reservation-content-wrapper{
+  height: 83vh;
   background-image: url(../images/form-background.jpg);
   background-size: cover;
 }
@@ -258,6 +260,76 @@
   font-size: 15px;
   border: none;
 }
+
+/* error */
+.error {
+  height: 83vh;
+  margin: auto;
+  font-size: 3vw;
+  padding: 10px;
+  border: 20px double #d49c6b;
+}
+
+/* menu */
+.menu-content-wrapper {
+  background-image: url(../images/form-background.jpg);
+  background-attachment: fixed;
+  padding: 5vh 0 2vh;
+}
+
+.menu-content {
+  background-color: #fff;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.menu-heading {
+  text-align: center;
+  font-size: 10vw;
+  font-family: 'MAXWELL';
+  color: #d49c6b;
+}
+
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+
+  width: 90%;
+  margin: 5vh auto 0;
+}
+
+.right-card {
+  flex-direction: row-reverse;
+}
+
+.infotmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+  text-align: center;
+}
+
+.photo-menu-card {
+  width: 60%;
+  border: 10px double #d49c6b; 
+}
+
+.menu-card-name {
+  font-size: 3vw;
+  color: #252b31;
+}
+
+.info-dich {
+  font-size: 1.5vw;
+  color: #5e6668;
+}
+
+.info-calories {
+  font-size: 1.5vw;
+  color: #c1c8c7;
+}
+
 
 @media (min-width: 450px) {
   /* contacts */
@@ -347,4 +419,66 @@
   .reservation-form__info {
     font-size: 4vw;
   }
+}
+
+
+
+/* menu */
+.menu-content-wrapper {
+  background-image: url(../images/form-background.jpg);
+  background-attachment: fixed;
+  padding: 5vh 0 2vh;
+}
+
+.menu-content {
+  background-color: #fff;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.menu-heading {
+  text-align: center;
+  font-size: 10vw;
+  font-family: 'MAXWELL';
+  color: #d49c6b;
+}
+
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+
+  width: 90%;
+  margin: 5vh auto 0;
+}
+
+.right-card {
+  flex-direction: row-reverse;
+}
+
+.infotmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+  text-align: center;
+}
+
+.photo-menu-card {
+  width: 60%;
+  border: 10px double #d49c6b; 
+}
+
+.menu-card-name {
+  font-size: 3vw;
+  color: #252b31;
+}
+
+.info-dich {
+  font-size: 1.5vw;
+  color: #5e6668;
+}
+
+.info-calories {
+  font-size: 1.5vw;
+  color: #c1c8c7;
 }
