@@ -126,7 +126,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   margin: auto;
 
@@ -175,8 +175,6 @@
   display: flex;
   justify-content: space-around;
   list-style: none;
-
-  margin-bottom: 10px;
 }
 
 .contacts-card__phone {
@@ -217,14 +215,14 @@
 .reservation-form {
   background-color: rgba(255, 255, 255, 0.7);
   margin: 0 auto;
-  width: 70vw;
+  width: 100%;
   text-align: center;
 }
 
 .reservation-form__info {
-  font-size: 6vw;
-  margin: 5vh 0;
-  border-bottom: 3px dotted #d49c6b;
+  font-size: 15vw;
+  margin: 5vh 0 0;
+  font-family: "MAXWELL";
 }
 
 .form__group {
@@ -235,12 +233,14 @@
 }
 
 .form__input {
-  width: 100%;
+  width: 70%;
   background-color: #fff;
   display: block;
   padding: 10px;
   border: none;
   border-bottom: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  margin: auto;
 }
 
 .form__input:focus {
@@ -346,8 +346,12 @@
   }
 
   /* form */
+  .reservation-form {
+    width: 70vw;
+  }
+
   .reservation-form__info {
-    font-size: 7vw;
+    font-size: 10vw;
   }
 
   .reservation__button {
@@ -393,7 +397,7 @@
 
   /* form */
   .reservation-form__info {
-    font-size: 5vw;
+    font-size: 10vw;
   }
 }
 
@@ -417,7 +421,7 @@
   }
 
   .reservation-form__info {
-    font-size: 4vw;
+    font-size: 6vw;
   }
 }
 
