@@ -16,15 +16,10 @@
 }
 
 /* common */
-.title {
-  font-size: 40px;
-  font-weight: 700;
-  color: #252b31;
-}
-
-.logo {
-  font-size: 50px;
-  font-weight: 400;
+.content-wrapper {
+  height: 83vh;
+  margin: 0 3%;
+  display: flex;
 }
 
 .button {
@@ -43,27 +38,13 @@
   opacity: 0.6;
 }
 
-/* */
-.container {
-  margin: 0 50px;
-}
-
-.content-wrapper {
-  display: flex;
-
-  width: 100%;
-  height: 80vh;
-}
-
-
 /* header */
 .header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-family: "HipstelveticaBold";
-  margin: 10px;
 }
 
 .header__link {
@@ -71,6 +52,9 @@
 }
 
 .header__logo {
+  font-size: 50px;
+  font-weight: 400;
+  font-family: "HipstelveticaBold";
   color: #d49c6b;
 }
 
@@ -79,7 +63,7 @@
 }
 
 .nav__items {
-  font-family: MAXWELL;
+  font-family: "MAXWELL";
   font-size: 20px;
   list-style: none;
   display: flex;
@@ -88,7 +72,6 @@
 .nav__item {
   padding: 10px;
   color: #252b31;
-  border: 1px solid rgba(1, 1, 1, 0);
 }
 
 .nav__item:hover {
@@ -102,7 +85,7 @@
 
 /* main page */
 .main-content-wrapper {
-  background-image: url(https://kudago.com/media/images/place/c8/fa/c8fa8c263408cdc21a887b8c90deb6a6.jpg);
+  background-image: url(../images/index-background.jpg);
   background-size: cover;
 }
 
@@ -113,39 +96,46 @@
 
 .content__title {
   text-align: center;
-  background-color:rgba(193, 200, 199, 0.5);
+  background-color:rgba(193, 200, 199, 0.6);
   border: 8px double #d49c6b;
-  margin-bottom: 50px;
+  margin-bottom: 3vh;
 }
 
 .content__button {
-  width: 40%;
+  width: 80%;
   margin: auto;
   font-size: 20px;
 }
 
+.content__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #252b31;
+}
+
 /* contacts */
 .contacts-content-wrapper{
-  background-image: url(https://kudamoscow.ru/uploads/91e7fd0a908d7d19c16ce387d7e19beb.jpg);
+  background-image: url(../images/contacts-background.jpeg);
   background-size: cover;
-  display: flex;
+
   flex-direction: column;
 }
+
 .contacts-card {
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
-  margin: auto;
-
   justify-content: space-between;
   text-align: center;
+  margin: auto;
 
   height: 40vh;
-  width: 40vw;
+  width: 70vw;
 }
 
 .addition {
-  width: 30%;
+  display: none;
+  width: 30vw;
   height: 20%;
   margin: 0 auto;
 
@@ -154,12 +144,12 @@
 
 .contacts-card__link {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 10vw;
+  height: 10vw;
 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 50px;
+  background-size: 10vw;
 
   font-size: 0;
 }
@@ -191,7 +181,7 @@
 .contacts-card__phone {
   text-decoration: none;
   color: #252b31;
-  font-size: 40px;
+  font-size: 3vh;
   font-weight: 900;
   text-shadow: #d49c6b 1px 1px 0, #d49c6b 2px 2px 0, 
               #d49c6b 3px 3px 0, #d49c6b 4px 4px 0, 
@@ -209,6 +199,8 @@
 
 .contacts-logo {
   color: #d49c6b;
+  font-size: 5vh;
+  font-weight: 900;
   text-shadow: #252b31 1px 1px 0, #252b31 2px 2px 0, 
                 #252b31 3px 3px 0, #252b31 4px 4px 0, 
                 #252b31 5px 5px 0;
@@ -216,18 +208,19 @@
 
 /* form */
 .reservation-content-wrapper{
-  background-image: url(https://img03.rl0.ru/afisha/o/s3.afisha.ru/mediastorage/8d/dd/917c801b1b914bd38e235c29dd8d.jpg);
+  background-image: url(../images/form-background.jpg);
   background-size: cover;
 }
 
 .reservation-form {
   background-color: rgba(255, 255, 255, 0.7);
-  margin-left: 15vw;
-  width: 30vw;
+  margin: 0 auto;
+  width: 70vw;
   text-align: center;
 }
 
 .reservation-form__info {
+  font-size: 6vw;
   margin: 5vh 0;
   border-bottom: 3px dotted #d49c6b;
 }
@@ -239,14 +232,9 @@
   justify-content: space-around;
 }
 
-.form__label {
-  pointer-events: none;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
 .form__input {
+  width: 100%;
+  background-color: #fff;
   display: block;
   padding: 10px;
   border: none;
@@ -267,6 +255,96 @@
 .reservation__button {
   margin: 2vh auto;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
   border: none;
+}
+
+@media (min-width: 450px) {
+  /* contacts */
+  .contacts-card__phone {
+    font-size: 4vh;
+  }
+
+    /* contacts */
+  .contacts-card__link {
+    width: 7vw;
+    height: 7vw;
+
+    background-size: 7vw;
+  }
+
+  /* form */
+  .reservation-form__info {
+    font-size: 7vw;
+  }
+
+  .reservation__button {
+    margin: 2vh auto;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+  }
+}
+
+
+@media (min-width: 650px) {
+  /* header */
+  .header {
+    flex-direction: row;
+    margin: 0 50px;
+  }
+
+  /* main-page */
+  .content__title {
+    font-size: 40px;
+  }
+
+  .content__button {
+    width: 40%;
+  }
+
+  /* contacts */
+  .addition {
+    display: block;
+  }
+
+  .contacts-card {
+    width: 40vw;
+  }
+
+  .contacts-card__link {
+    width: 5vw;
+    height: 5vw;
+
+    background-size: 5vw;
+  }
+
+  /* form */
+  .reservation-form__info {
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 900px) {
+  /* contacts */
+  .contacts-card__phone {
+    font-size: 6vh;
+  }
+
+  .contacts-card__link {
+    width: 4.2vw;
+    height: 4.2vw;
+
+    background-size: 4.2vw;
+  }
+
+  /* form */
+  .reservation-form {
+    margin-left: 15vw;
+    width: 40vw;
+  }
+
+  .reservation-form__info {
+    font-size: 4vw;
+  }
 }
