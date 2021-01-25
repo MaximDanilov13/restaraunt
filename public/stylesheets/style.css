@@ -14,6 +14,10 @@
   font-family: MAXWELL;
   src: url(fonts/MAXWELL.ttf);
 }
+@font-face {
+  font-family: CaslonBecker;
+  src: url(fonts/CaslonBecker.ttf);
+}
 
 /* common */
 .content-wrapper {
@@ -334,6 +338,26 @@
   color: #c1c8c7;
 }
 
+/* information */
+.information-content{
+  width: 60vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.logo-information {
+  width: 80%;
+  margin: auto;
+}
+
+.info-restaraunt {
+  font-family: CaslonBecker;
+  font-size: 5vw;
+  margin-top: 10px;
+  text-indent: 3vw;
+}
 
 @media (min-width: 450px) {
   /* contacts */
@@ -403,6 +427,12 @@
   .reservation-form__info {
     font-size: 10vw;
   }
+
+  /* information */
+  .info-restaraunt {
+    font-size: 3vw;
+  }
+
 }
 
 @media (min-width: 900px) {
