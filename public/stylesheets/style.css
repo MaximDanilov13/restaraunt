@@ -107,7 +107,7 @@
 
 .content__button {
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   font-size: 20px;
 }
 
@@ -210,7 +210,7 @@
 }
 
 /* form */
-.reservation-content-wrapper{
+.reservation-form-content-wrapper{
   height: 90vh;
   background-image: url(../images/form-background.jpg);
   background-size: cover;
@@ -344,7 +344,6 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-
 }
 
 .logo-information {
@@ -357,6 +356,54 @@
   font-size: 5vw;
   margin-top: 10px;
   text-indent: 3vw;
+}
+
+/* after-reservation */
+.after-reserv-content-wrapper {
+  height: 90vh;
+  background-image: url(../images/form-background.jpg);
+  background-size: cover;
+}
+
+.after-reserv-content{
+  width: 60vw;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.logo-after-reserv {
+  width: 60%;
+  margin: 0 auto;
+  border: 10px double #d49c6b;
+  background-color: #fff;
+}
+
+.information-after-reserv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+
+  height: 30vh;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50px;
+  border: 10px double #d49c6b;
+}
+
+.header-after-reserv{
+  font-size: 4vw;
+  color: #252b31;
+}
+
+.info-after-reserv {
+  font-size: 3vw;
+  color: #5e6668;
+  margin: 5px;
 }
 
 @media (min-width: 450px) {
@@ -387,6 +434,15 @@
     font-weight: 600;
     font-size: 20px;
     border: none;
+  }
+
+  /* after-reservation */
+  .header-after-reserv{
+    font-size: 3vw;
+  }
+
+  .info-after-reserv {
+    font-size: 2vw;
   }
 }
 
@@ -456,5 +512,14 @@
 
   .reservation-form__info {
     font-size: 6vw;
+  }
+
+  /* after-reservation */
+  .header-after-reserv{
+    font-size: 2.5vw;
+  }
+
+  .info-after-reserv {
+    font-size: 1.5vw;
   }
 }

@@ -4,7 +4,7 @@ const Reservation = require("../models/reservation");
 
 
 exports.reservationForm = async (req, res, next) => {
-  res.render("reservation-form", { title: "Contacts | thirtten", name: "reservation-form" });
+  res.render("reservation-form", { title: "Reservation | thirtten", name: "reservation-form" });
 };
 
 exports.reservation = [
@@ -26,7 +26,7 @@ exports.reservation = [
 
       await reservation.save();
 
-      res.render("index", { title: "Contacts | thirtten", name: "index" });
+      res.render("after-reservation", { title: "thirtten", name: "after-reservation" });
     } catch (err) {
       console.error(err);
       return next(err);
